@@ -1,3 +1,46 @@
-footer {
-  display: none;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  color: black;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 22px;
+}
+.header__logo {
+  width: 170px;
+  height: 33px;
+}
+.header__return {
+  position: absolute;
+  left: 23px;
+  top: 26px;
+  font-size: 1.2em;
+}
+
+.place {
+  height: 50px;
+  width: 100%;
+  color: #353535;
+  background: #eaeaea;
 }/*# sourceMappingURL=main.css.map */

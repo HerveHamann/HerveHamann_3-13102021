@@ -1,1 +1,19 @@
+.header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 22px;
 
+  &__logo {
+    width: 170px;
+    height: 33px;
+  }
+  &__return {
+    position: absolute;
+    left: 23px;
+    top: 26px;
+    font-size: 1.2em;
+  }
+}
