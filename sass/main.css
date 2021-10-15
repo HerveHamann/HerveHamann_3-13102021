@@ -1,10 +1,13 @@
+/*Colors variables*/
+/*Text variables*/
+/*font-size variables*/
+/*font-weight variables*/
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  color: black;
 }
 
 body {
@@ -26,6 +29,7 @@ h1 {
   justify-content: center;
   position: relative;
   padding-top: 22px;
+  box-shadow: 2px 2px 2px #d1d1d1;
 }
 .header__logo {
   width: 170px;
@@ -36,6 +40,7 @@ h1 {
   left: 23px;
   top: 26px;
   font-size: 1.2em;
+  color: black;
 }
 
 .place {
@@ -43,4 +48,145 @@ h1 {
   width: 100%;
   color: #353535;
   background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.place__text {
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.discover {
+  width: 100%;
+  height: 288px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  padding-bottom: 56px;
+  text-align: center;
+}
+.discover__title {
+  font-weight: 700;
+  padding: 0px 63px 0px 63px;
+}
+.discover__text {
+  padding: 0px 20px 16px 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.discover__btn {
+  color: white;
+  padding: 16px 23px 16px 23px;
+  cursor: pointer;
+  background: linear-gradient(175deg, #ff79da, #9356dc);
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  box-shadow: #cfcfcf 0px 3px 15px;
+  position: relative;
+  z-index: 1;
+}
+.discover__btn:hover::after {
+  opacity: 1;
+}
+.discover__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(175deg, #ff93e1, #a16be0);
+  border-radius: 30px;
+  border: none;
+  box-shadow: #505050 0px 3px 15px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
+}
+
+.working {
+  width: 100%;
+  height: 442px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 67px 0;
+}
+.working__title {
+  font-weight: 700;
+  width: 87%;
+}
+.working__working-card {
+  cursor: pointer;
+  background: #f6f6f6;
+  width: 87%;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: #cfcfcf 0px 3px 15px;
+  position: relative;
+  z-index: 1;
+}
+.working__working-card:hover::after {
+  opacity: 1;
+}
+.working__working-card:hover .working__working-card__icon {
+  color: #9356dc;
+}
+.working__working-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
+  background: #f4eefc;
+  border-radius: 20px;
+}
+.working__working-card__number-icon {
+  color: white;
+  background: #9356dc;
+  width: 23px;
+  height: 23px;
+  border-radius: 40px;
+  padding-top: 5px;
+  margin-left: -12px;
+  text-align: center;
+  font-size: 12px;
+  margin-right: 7.36%;
+}
+.working__working-card__icon {
+  color: #7e7e7e;
+  font-size: 20px;
+  margin-right: 7.36%;
+}
+
+.restaurants {
+  width: 100%;
+  height: 1225px;
+  background: #f6f6f6;
+  padding: 0 5.3% 0 5.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: red solid 1px;
+}
+.restaurants__card {
+  width: 283px;
+  height: 250px;
+  border: red 1px solid;
 }/*# sourceMappingURL=main.css.map */

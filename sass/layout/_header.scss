@@ -5,6 +5,7 @@
   justify-content: center;
   position: relative;
   padding-top: 22px;
+  box-shadow: 2px 2px 2px darken($placebgcolor, 10%);
 
   &__logo {
     width: 170px;
@@ -15,5 +16,6 @@
     left: 23px;
     top: 26px;
     font-size: 1.2em;
+    color: $black;
   }
 }

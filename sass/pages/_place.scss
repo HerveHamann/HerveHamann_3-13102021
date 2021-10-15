@@ -1,6 +1,14 @@
 .place {
   height: 50px;
   width: 100%;
-  color: #353535;
-  background: #eaeaea;
+  color: $placecolor;
+  background: $placebgcolor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    margin-left: 18px;
+    font-weight: bold;
+  }
 }

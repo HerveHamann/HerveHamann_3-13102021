@@ -1,0 +1,56 @@
+@mixin btn {
+  color: $white;
+  padding: 16px 23px 16px 23px;
+  cursor: pointer;
+  background: linear-gradient(175deg, $color-secondary, $color-primary);
+  border-radius: 30px;
+  border: none;
+  font-size: $btnsize;
+  box-shadow: $color-shadow 0px 3px 15px;
+}
+
+@mixin btnhover {
+  background: linear-gradient(175deg, lighten($color-secondary, 5%), lighten($color-primary, 5%));
+  border-radius: 30px;
+  border: none;
+  box-shadow: darken($color-shadow, 50%) 0px 3px 15px;
+}
+
+@mixin working-card {
+  cursor: pointer;
+  background: $bgcolor;
+  width: 87%;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  font-weight: $font-bold;
+  font-size: 16px;
+  box-shadow: $color-shadow 0px 3px 15px;
+}
+@mixin working-cardhover {
+  background: lighten($color-primary, 36%);
+  border-radius: 20px;
+}
+@mixin number-icon {
+  color: $white;
+  background: $color-primary;
+  width: 23px;
+  height: 23px;
+  border-radius: 40px;
+  padding-top: 5px;
+  margin-left: -12px;
+  text-align: center;
+  font-size: 12px;
+}
+@mixin icon {
+  color: $icon-color;
+  font-size: 20px;
+  margin-right: 7.36%;
+}
+@mixin card {
+  width: 283px;
+  height: 250px;
+  border: red 1px solid;
+}

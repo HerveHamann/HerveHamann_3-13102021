@@ -7,7 +7,9 @@
     <script src="https://kit.fontawesome.com/58a9704968.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
     <title>Ohmyfood Acceuil</title>
   </head>
@@ -17,38 +19,38 @@
     </header>
     <section class="place">
       <i class="fas fa-map-marker-alt"></i>
-      <p>Paris, Belleville</p>
-      <button></button>
+      <p class="place__text">Paris, Belleville</p>
     </section>
 
-    <section>
-      <h2>Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+    <section class="discover">
+      <h2 class="discover__title">Réservez le menu qui vous convient</h2>
+      <p class="discover__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <button class="discover__btn">Explorer nos restaurants</button>
     </section>
 
-    <section>
-      <h2>Fonctionnement</h2>
-      <div>
-        <p>1</p>
-        <i class="fas fa-mobile-alt"></i>
+    <section class="working">
+      <h2 class="working__title">Fonctionnement</h2>
+      <div class="working__working-card">
+        <p class="working__working-card__number-icon">1</p>
+        <i class="fas fa-mobile-alt working__working-card__icon"></i>
         <p>Choisissez un restaurant</p>
       </div>
-      <div>
-        <p>2</p>
-        <i class="fas fa-list"></i>
+      <div class="working__working-card">
+        <p class="working__working-card__number-icon">2</p>
+        <i class="fas fa-list working__working-card__icon"></i>
         <p>Composez votre menu</p>
       </div>
-      <div>
-        <p>3</p>
-        <i class="fas fa-store"></i>
+      <div class="working__working-card">
+        <p class="working__working-card__number-icon">3</p>
+        <i class="fas fa-store working__working-card__icon"></i>
         <p>Dégustez au restaurant</p>
       </div>
     </section>
-    <section>
+    <section class="restaurants">
       <h2>Restaurants</h2>
       <div>
         <a href="la_palette_du_gout.html">
-          <div>
+          <div class="restaurants__card">
             <img src="#" alt="La palette du goût" />
           </div>
           <p>Nouveau</p>
