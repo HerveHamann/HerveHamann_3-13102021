@@ -8,8 +8,7 @@
   padding: 50px 0 67px 0;
 
   &__title {
-    font-weight: $font-bold;
-    width: 87%;
+    @include title;
   }
   &__working-card {
     @include working-card;

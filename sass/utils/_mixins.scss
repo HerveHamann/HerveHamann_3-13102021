@@ -16,6 +16,10 @@
   box-shadow: darken($color-shadow, 50%) 0px 3px 15px;
 }
 
+@mixin title {
+  font-weight: $font-bold;
+  width: 87%;
+}
 @mixin working-card {
   cursor: pointer;
   background: $bgcolor;
@@ -50,7 +54,59 @@
   margin-right: 7.36%;
 }
 @mixin card {
-  width: 283px;
+  width: 89.6%;
   height: 250px;
-  border: red 1px solid;
+
+  position: relative;
+  border-radius: 20px;
+  box-shadow: $color-shadow 0px 3px 15px;
+}
+@mixin image {
+  width: 100%;
+  height: 69.6%;
+  position: absolute;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  object-position: bottom;
+}
+@mixin new-card {
+  width: 80px;
+  height: 30px;
+  background-color: $color-tertiary;
+  color: darken($color-tertiary, 40%);
+  font-weight: $font-bold;
+  font-size: 14px;
+  padding-top: 7px;
+  text-align: center;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
+@mixin card-description {
+  width: 100%;
+  height: 30.4%;
+  position: absolute;
+  bottom: 0px;
+  padding-left: $padding-left-card;
+  padding-top: 16px;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: $btnsize;
+}
+@mixin title-card {
+  width: 50%;
+  font-weight: $font-bold;
+}
+@mixin card-text {
+  width: 50%;
+  font-size: $cardsize;
+  font-weight: $font-light;
+}
+@mixin heart {
+  font-size: 23px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
