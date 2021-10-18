@@ -6,7 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: red solid 1px;
+  padding: 55px 0 60px 0;
+
   &__title {
     @include title;
   }
@@ -28,23 +29,13 @@
       }
       &__heart {
         @include heart;
-        z-index: 1;
+      }
+      &__heart-full {
+        @include heart-full;
+        opacity: 0;
+        cursor: pointer;
         &:active {
-          &::after {
-            opacity: 1;
-          }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background: linear-gradient($color-secondary, $color-primary);
-          opacity: 0;
-          z-index: -1;
-          transition: opacity 500ms;
+          animation: progress-bar $prog-bar-dur forwards;
         }
       }
     }

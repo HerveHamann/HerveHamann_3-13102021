@@ -1,12 +1,13 @@
 /*Colors variables*/
 $black: black;
-$white: white;
+$white: #ffffff;
 
 $placecolor: #353535;
 $placebgcolor: #eaeaea;
 
 $bgcolor: #f6f6f6;
 $icon-color: #7e7e7e;
+$bgfootercolor: #353535;
 
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
@@ -27,3 +28,7 @@ $font-bold: 700;
 $font-extrabold: 900;
 
 $padding-left-card: 14px;
+
+/*animation variables*/
+
+$prog-bar-dur: 1000ms;

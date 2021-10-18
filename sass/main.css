@@ -2,6 +2,28 @@
 /*Text variables*/
 /*font-size variables*/
 /*font-weight variables*/
+/*animation variables*/
+/* Heart animation*/
+@-webkit-keyframes progress-bar {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+@keyframes progress-bar {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
 *,
 *::after,
 *::before {
@@ -14,12 +36,46 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
 * {
   font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 16px 23px 16px 23px;
+  cursor: pointer;
+  background: linear-gradient(175deg, #ff79da, #9356dc);
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  box-shadow: #cfcfcf 0px 3px 15px;
+}
+
+.heart {
+  font-size: 23px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.heart-full {
+  font-size: 23px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .header {
@@ -41,6 +97,39 @@ h1 {
   top: 26px;
   font-size: 1.2em;
   color: black;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  color: #ffffff;
+  background-color: #353535;
+  padding: 0 0 0 22px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__title {
+  padding: 25px 0 15px 0;
+  font-size: 18px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  font-size: 16px;
+}
+.footer__list__object1 {
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__list__object2 {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .place {
@@ -79,7 +168,7 @@ h1 {
   font-weight: 300;
 }
 .discover__btn {
-  color: white;
+  color: #ffffff;
   padding: 16px 23px 16px 23px;
   cursor: pointer;
   background: linear-gradient(175deg, #ff79da, #9356dc);
@@ -157,7 +246,7 @@ h1 {
   border-radius: 20px;
 }
 .working__working-card__number-icon {
-  color: white;
+  color: #ffffff;
   background: #9356dc;
   width: 23px;
   height: 23px;
@@ -182,7 +271,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: red solid 1px;
+  padding: 55px 0 60px 0;
 }
 .restaurants__title {
   font-weight: 700;
@@ -202,8 +291,6 @@ h1 {
   border-radius: 20px 20px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 .restaurants__card__new-card {
   width: 80px;
@@ -234,10 +321,12 @@ h1 {
 .restaurants__card__card-description__title-card {
   width: 50%;
   font-weight: 700;
+  color: black;
 }
 .restaurants__card__card-description__card-text {
   width: 50%;
   font-size: 18px;
+  color: black;
   font-weight: 300;
 }
 .restaurants__card__card-description__heart {
@@ -245,20 +334,20 @@ h1 {
   position: absolute;
   top: 24px;
   right: 24px;
-  z-index: 1;
 }
-.restaurants__card__card-description__heart:active::after {
-  opacity: 1;
-}
-.restaurants__card__card-description__heart::after {
-  content: "";
+.restaurants__card__card-description__heart-full {
+  font-size: 23px;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(#ff79da, #9356dc);
+  top: 24px;
+  right: 24px;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   opacity: 0;
-  z-index: -1;
-  transition: opacity 500ms;
+  cursor: pointer;
+}
+.restaurants__card__card-description__heart-full:active {
+  -webkit-animation: progress-bar 1000ms forwards;
+          animation: progress-bar 1000ms forwards;
 }/*# sourceMappingURL=main.css.map */
