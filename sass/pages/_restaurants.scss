@@ -29,9 +29,15 @@
       }
       &__heart {
         @include heart;
+        position: absolute;
+        top: 24px;
+        right: 24px;
       }
       &__heart-full {
         @include heart-full;
+        position: absolute;
+        top: 24px;
+        right: 24px;
         opacity: 0;
         cursor: pointer;
         &:active {

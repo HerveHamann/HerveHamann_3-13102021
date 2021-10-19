@@ -1,0 +1,132 @@
+.menu-section {
+  @include menu-section;
+  &__header-menu {
+    @include header-menu;
+
+    &__heading-menu {
+      @include heading-menu;
+    }
+    &__heart {
+      @include heart;
+      position: absolute;
+      top: 8px;
+      right: 7.7%;
+    }
+    &__heart-full {
+      @include heart-full;
+      position: absolute;
+      top: 8px;
+      right: 7.7%;
+      cursor: pointer;
+      opacity: 0;
+      &:active {
+        animation: progress-bar $prog-bar-dur forwards;
+      }
+    }
+  }
+  &__sub-menu {
+    @include sub-menu;
+    &__title-menu {
+      @include title-menu;
+      & span {
+        padding-bottom: 4px;
+        border-bottom: $color-tertiary solid 3px;
+      }
+    }
+    &__button-menu {
+      @include button-menu;
+      overflow: hidden;
+      &__text-menu {
+        @include text-menu;
+        border: red solid 1px;
+        & h2 {
+          font-size: $cardsize;
+          font-weight: $font-bold;
+          border: red solid 1px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 99%;
+          text-align: left;
+        }
+        & p {
+          font-size: $btnsize;
+          width: 99%;
+          border: red solid 1px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          text-align: left;
+        }
+      }
+      &:active .menu-section__sub-menu__button-menu__money-validate {
+        & > span {
+          transform: translateX(0px);
+        }
+        & > .menu-section__sub-menu__button-menu__money-validate__validate-bar {
+          transform: translateX(0px) scaleX(1);
+          & > i {
+            transform: rotate(0turn);
+          }
+        }
+      }
+
+      &__money-validate {
+        @include money-validate;
+        & span {
+          width: 50px;
+          font-weight: $font-bold;
+          font-size: $btnsize;
+          padding: 36px 22px 0 0;
+          border-radius: 0 15px 15px 0;
+          transform: translateX(60px);
+          transition: transform 500ms;
+          border: red solid 1px;
+        }
+        & .menu-section__sub-menu__button-menu__money-validate__validate-bar {
+          padding-top: 25px;
+          width: 60px;
+          border-radius: 0 15px 15px 0;
+          background-color: $color-tertiary;
+          transform: translateX(60px) scaleX(0);
+          transition: transform 500ms;
+          transform-origin: right;
+
+          & i {
+            font-size: 20px;
+            color: $white;
+            transform: rotate(-1turn);
+            transition: transform 1000ms;
+          }
+        }
+      }
+    }
+  }
+  &__btn-order {
+    @include btn;
+    position: relative;
+    z-index: 1;
+    width: 186px;
+    padding: 15px 50px 15px 50px;
+    align-self: center;
+    margin: 10px 0 85px 0;
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include btnhover;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 500ms;
+    }
+  }
+}

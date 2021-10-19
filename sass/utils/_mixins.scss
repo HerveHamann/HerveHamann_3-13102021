@@ -105,18 +105,77 @@
   font-weight: $font-light;
 }
 @mixin heart {
-  font-size: 23px;
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  font-size: 25px;
 }
 @mixin heart-full {
-  font-size: 23px;
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  font-size: 25px;
   background-image: linear-gradient($color-primary, $color-secondary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+/*Mixin restaurants*/
+@mixin main-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+@mixin menu-section {
+  background-color: $bgcolor;
+  position: relative;
+  top: -30px;
+  border-radius: 30px 30px 0 0;
+  padding: 30px 14px 0px 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin header-menu {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+@mixin heading-menu {
+  font-size: $restaurantname;
+  font-weight: $restaurant-weight;
+  padding-left: 1.4%;
+}
+@mixin sub-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  margin-bottom: 40px;
+}
+@mixin title-menu {
+  text-transform: uppercase;
+  padding-left: 1.4%;
+  font-size: $btnsize;
+  padding-bottom: 10px;
+}
+@mixin button-menu {
+  width: 100%;
+  height: 68px;
+  background-color: $white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: $color-shadow 0px 3px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+@mixin text-menu {
+  margin: 12px 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+
+  width: 100%; /*65%% temporaire*/
+}
+@mixin money-validate {
+  height: 100%;
+  display: flex;
+  background-color: $white;
+  border-radius: 0 15px 15px 0;
 }
