@@ -9,3 +9,14 @@
     transform: scale(1.2);
   }
 }
+
+@keyframes apparition-menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

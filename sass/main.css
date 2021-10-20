@@ -26,6 +26,26 @@
     transform: scale(1.2);
   }
 }
+@-webkit-keyframes apparition-menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes apparition-menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 *,
 *::after,
 *::before {
@@ -103,6 +123,7 @@ h1 {
   padding: 0 0 0 22px;
   display: flex;
   flex-direction: column;
+  margin-top: -30px;
 }
 .footer__title {
   padding: 22px 0 18px 0;
@@ -115,6 +136,7 @@ h1 {
   justify-content: space-between;
   height: 100px;
   font-size: 16px;
+  cursor: pointer;
 }
 .footer__list__object1 {
   width: 190px;
@@ -127,6 +149,9 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.footer__list__object3 a {
+  color: white;
 }
 
 .main-image {
@@ -177,8 +202,8 @@ h1 {
   opacity: 0;
 }
 .menu-section__header-menu__heart-full:active {
-  -webkit-animation: progress-bar 1000ms forwards;
-          animation: progress-bar 1000ms forwards;
+  -webkit-animation: progress-bar 500ms forwards ease-in-out;
+          animation: progress-bar 500ms forwards ease-in-out;
 }
 .menu-section__sub-menu {
   display: flex;
@@ -196,6 +221,18 @@ h1 {
   padding-bottom: 4px;
   border-bottom: #99e2d0 solid 3px;
 }
+.menu-section__sub-menu__button-menu:nth-child(2) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+.menu-section__sub-menu__button-menu:nth-child(3) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.menu-section__sub-menu__button-menu:nth-child(4) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
 .menu-section__sub-menu__button-menu {
   width: 100%;
   height: 68px;
@@ -205,41 +242,44 @@ h1 {
   box-shadow: #cfcfcf 0px 3px 15px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   overflow: hidden;
+  position: relative;
+  -webkit-animation: apparition-menu 1000ms both ease-in-out;
+          animation: apparition-menu 1000ms both ease-in-out;
 }
 .menu-section__sub-menu__button-menu__text-menu {
   margin: 12px 0 0 12px;
   display: flex;
   flex-direction: column;
   row-gap: 4px;
+  position: relative;
   width: 100%;
-  /*65%% temporaire*/
-  border: red solid 1px;
+  position: absolute;
+  transition: width 500ms ease-in-out;
 }
 .menu-section__sub-menu__button-menu__text-menu h2 {
   font-size: 18px;
   font-weight: 700;
-  border: red solid 1px;
+  width: 80%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 99%;
   text-align: left;
 }
 .menu-section__sub-menu__button-menu__text-menu p {
   font-size: 16px;
-  width: 99%;
-  border: red solid 1px;
+  width: 80%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-align: left;
 }
-.menu-section__sub-menu__button-menu:active .menu-section__sub-menu__button-menu__money-validate > span {
-  transform: translateX(0px);
+.menu-section__sub-menu__button-menu:active .menu-section__sub-menu__button-menu__text-menu {
+  width: 75%;
 }
-.menu-section__sub-menu__button-menu:active .menu-section__sub-menu__button-menu__money-validate > .menu-section__sub-menu__button-menu__money-validate__validate-bar {
-  transform: translateX(0px) scaleX(1);
+.menu-section__sub-menu__button-menu:active .menu-section__sub-menu__button-menu__money-validate {
+  transform: translateX(0px);
 }
 .menu-section__sub-menu__button-menu:active .menu-section__sub-menu__button-menu__money-validate > .menu-section__sub-menu__button-menu__money-validate__validate-bar > i {
   transform: rotate(0turn);
@@ -249,31 +289,31 @@ h1 {
   display: flex;
   background-color: #ffffff;
   border-radius: 0 15px 15px 0;
+  position: relative;
+  transform: translateX(60px);
+  transform-origin: right;
+  transition: transform 500ms ease-in-out;
+  position: absolute;
+  right: 0;
 }
 .menu-section__sub-menu__button-menu__money-validate span {
   width: 50px;
   font-weight: 700;
-  font-size: 16px;
-  padding: 36px 22px 0 0;
+  font-size: 14px;
+  padding: 40px 22px 0 0;
   border-radius: 0 15px 15px 0;
-  transform: translateX(60px);
-  transition: transform 500ms;
-  border: red solid 1px;
 }
 .menu-section__sub-menu__button-menu__money-validate .menu-section__sub-menu__button-menu__money-validate__validate-bar {
   padding-top: 25px;
   width: 60px;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
-  transform: translateX(60px) scaleX(0);
-  transition: transform 500ms;
-  transform-origin: right;
 }
 .menu-section__sub-menu__button-menu__money-validate .menu-section__sub-menu__button-menu__money-validate__validate-bar i {
   font-size: 20px;
   color: #ffffff;
   transform: rotate(-1turn);
-  transition: transform 1000ms;
+  transition: transform 500ms ease-in-out;
 }
 .menu-section__btn-order {
   color: #ffffff;
@@ -526,6 +566,6 @@ h1 {
   cursor: pointer;
 }
 .restaurants__card__card-description__heart-full:active {
-  -webkit-animation: progress-bar 1000ms forwards;
-          animation: progress-bar 1000ms forwards;
+  -webkit-animation: progress-bar 500ms forwards;
+          animation: progress-bar 500ms forwards;
 }/*# sourceMappingURL=main.css.map */
