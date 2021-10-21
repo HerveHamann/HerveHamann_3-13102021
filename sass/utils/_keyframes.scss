@@ -9,7 +9,7 @@
     transform: scale(1.2);
   }
 }
-
+/* Apparition animation*/
 @keyframes apparition-menu {
   0% {
     transform: translateY(10px);
@@ -18,5 +18,122 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+/*Loader animation*/
+
+@keyframes loader-diseaper {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes circle-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes move-one {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-200px, -200px, 0) scale(3);
+  }
+}
+@keyframes move-two {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-250px, 200px, 0) scale(3);
+  }
+}
+@keyframes move-three {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(300px, 0px, 0) scale(3);
+  }
+}
+@keyframes move-four {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-300px, 0, 0) scale(3);
+  }
+}
+@keyframes move-five {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(250px, 200px, 0) scale(3);
+  }
+}
+@keyframes move-six {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(200px, -200px, 0) scale(3);
+  }
+}
+@keyframes apparition-omf {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

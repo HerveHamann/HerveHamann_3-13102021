@@ -187,3 +187,17 @@
   overflow: hidden;
   text-align: left;
 }
+/*Mixin loader*/
+@mixin fork {
+  background-image: linear-gradient($color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: circle-spin 750ms 750ms ease-in-out both reverse;
+}
+@mixin icon-spin {
+  background-image: linear-gradient($color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

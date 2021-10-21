@@ -43,6 +43,9 @@
     &__button-menu:nth-child(4) {
       animation-delay: $anim-delay * 3;
     }
+    &__button-menu:nth-child(5) {
+      animation-delay: $anim-delay * 4;
+    }
     &__button-menu {
       @include button-menu;
       cursor: pointer;
@@ -61,7 +64,7 @@
           @include text-cut;
         }
         & p {
-          font-size: $btnsize;
+          font-size: $btnmenusize;
           @include text-cut;
         }
       }
@@ -135,4 +138,25 @@
       transition: opacity 500ms;
     }
   }
+}
+
+/* METTRE DANS UNE MEDIA QUERIES POUR INF 450 PX OU CHANGER AVEC UNE MEDIA QUERIES? A Voir */
+.menu-exception {
+  height: 92px;
+
+  & h2 {
+    white-space: normal;
+  }
+  & span {
+    padding-top: 62px;
+  }
+}
+.margin-note {
+  margin-bottom: map-get($order-margin, note);
+}
+.margin-palette {
+  margin-bottom: map-get($order-margin, palette);
+}
+.margin-sens {
+  margin-bottom: map-get($order-margin, sens);
 }

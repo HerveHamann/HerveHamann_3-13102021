@@ -1,0 +1,75 @@
+.loading-spinner {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  position: fixed;
+  animation: loader-diseaper 0.1s 3.5s ease-in-out both;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__circle-spinner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+
+    font-size: 30px;
+    position: relative;
+    animation: circle-spin 3s ease-in-out both;
+    & h1 {
+      position: absolute;
+      left: 80px;
+      width: 100%;
+      animation: apparition-omf 400ms 2.5s ease-in-out both;
+      @include icon-spin;
+    }
+
+    &__icon-spin1 {
+      @include icon-spin;
+      animation: move-one 2250ms 250ms ease-in-out both;
+    }
+    &__icon-spin2 {
+      @include icon-spin;
+      animation: move-two 2500ms 500ms ease-in-out both;
+    }
+    &__icon-spin3 {
+      @include icon-spin;
+      animation: move-three 2250ms 750ms ease-in-out both;
+    }
+    &__icon-spin4 {
+      @include icon-spin;
+      animation: move-four 2000ms 1000ms ease-in-out both;
+    }
+    &__icon-spin5 {
+      @include icon-spin;
+      animation: move-five 1750ms 1250ms ease-in-out both;
+    }
+    &__icon-spin6 {
+      @include icon-spin;
+      animation: move-six 1500ms 1500ms ease-in-out both;
+    }
+    &__icon-fork1 {
+      position: absolute;
+      top: -15px;
+      @include fork;
+    }
+    &__icon-fork2 {
+      position: absolute;
+      right: -15px;
+      @include fork;
+    }
+    &__icon-fork3 {
+      position: absolute;
+      bottom: -15px;
+      @include fork;
+    }
+    &__icon-fork4 {
+      position: absolute;
+      left: -15px;
+      @include fork;
+    }
+  }
+}

@@ -18,6 +18,7 @@ $color-shadow: #cfcfcf;
 /*Text variables*/
 
 /*font-size variables*/
+$btnmenusize: 15px;
 $btnsize: 16px;
 $cardsize: 18px;
 $restaurantname: 28px;
@@ -33,9 +34,15 @@ $font-extrabold: 900;
 
 $padding-left-card: 14px;
 
+/*map margin commander*/
+
+$order-margin: (
+  note: 71px,
+  palette: 61px,
+  sens: 65px,
+);
 /*animation variables*/
 
 $prog-bar-dur: 500ms;
-
 $apparition-dur: 1000ms;
 $anim-delay: 500ms;
