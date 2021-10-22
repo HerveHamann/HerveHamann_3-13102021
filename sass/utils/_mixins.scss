@@ -94,12 +94,12 @@
   font-size: $btnsize;
 }
 @mixin title-card {
-  width: 50%;
+  width: 75%;
   font-weight: $font-bold;
   color: $black;
 }
 @mixin card-text {
-  width: 50%;
+  width: 75%;
   font-size: $cardsize;
   color: $black;
   font-weight: $font-light;
@@ -200,4 +200,27 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/*media queries mixin*/
+@mixin laptop-min {
+  @media screen and (min-width: map-get($media-map, laptopmax )) {
+    @content;
+  }
+}
+@mixin tablet-min {
+  @media screen and (min-width: map-get($media-map, tabletmin )) {
+    @content;
+  }
+}
+@mixin laptopl-min {
+  @media screen and (min-width: map-get($media-map, laptoplmin )) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: map-get($media-map,tabletmin )) and(max-width:map-get($media-map,tabletmax )) {
+    @content;
+  }
 }

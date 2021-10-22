@@ -1,5 +1,10 @@
 .menu-section {
   @include menu-section;
+  @include laptopl-min {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
   &__header-menu {
     @include header-menu;
@@ -27,6 +32,9 @@
   }
   &__sub-menu {
     @include sub-menu;
+    @include laptopl-min {
+      width: 30%;
+    }
     &__title-menu {
       @include title-menu;
       & span {
@@ -119,7 +127,9 @@
     padding: 15px 50px 15px 50px;
     align-self: center;
     margin: 10px 0 85px 0;
-
+    @include laptopl-min {
+      margin: 0 40% 0 40%;
+    }
     &:hover {
       &::after {
         opacity: 1;
@@ -140,7 +150,6 @@
   }
 }
 
-/* METTRE DANS UNE MEDIA QUERIES POUR INF 450 PX OU CHANGER AVEC UNE MEDIA QUERIES? A Voir */
 .menu-exception {
   height: 92px;
 

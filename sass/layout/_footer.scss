@@ -7,11 +7,17 @@
   display: flex;
   flex-direction: column;
   margin-top: -30px;
+  @include tablet-min {
+    height: 150px;
+  }
 
   &__title {
     padding: 22px 0 18px 0;
     font-size: $cardsize;
     font-weight: $restaurant-weight;
+    @include tablet-min {
+      font-size: 35px;
+    }
   }
   &__list {
     display: flex;
@@ -20,6 +26,15 @@
     height: 100px;
     font-size: $btnsize;
     cursor: pointer;
+    @include tablet-min {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      & li {
+        margin-left: 20px;
+        padding-right: 10px;
+      }
+    }
 
     &__object1 {
       width: 190px;

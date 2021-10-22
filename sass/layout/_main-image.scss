@@ -1,3 +1,6 @@
 .main-image {
   @include main-image;
+  @include tablet-min {
+    height: 350px;
+  }
 }

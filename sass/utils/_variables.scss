@@ -46,3 +46,18 @@ $order-margin: (
 $prog-bar-dur: 500ms;
 $apparition-dur: 1000ms;
 $anim-delay: 500ms;
+
+/*media queries map*/
+
+$media-map: (
+  smobilemax: 320px,
+  lmobilemin: 321px,
+  lmobilemax: 425px,
+  tabletmin: 426px,
+  tabletmax: 768px,
+  laptopmin: 769px,
+  laptopmax: 1024px,
+  laptoplmin: 1025px,
+  laptoplmax: 1440px,
+  desktopmin: 1441px,
+);

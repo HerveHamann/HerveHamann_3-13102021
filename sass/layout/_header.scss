@@ -6,10 +6,17 @@
   position: relative;
   padding-top: 22px;
   box-shadow: 2px 2px 2px darken($placebgcolor, 10%);
+  @include tablet-min {
+    height: 128px;
+  }
 
   &__logo {
     width: 170px;
     height: 33px;
+    @include tablet-min {
+      width: 340px;
+      height: 66px;
+    }
   }
   &__return {
     position: absolute;

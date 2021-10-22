@@ -5,8 +5,10 @@
 /*position variables*/
 /*map margin commander*/
 /*animation variables*/
+/*media queries map*/
 /*Mixin restaurants*/
 /*Mixin loader*/
+/*media queries mixin*/
 /* Heart animation*/
 @-webkit-keyframes progress-bar {
   0% {
@@ -15,7 +17,7 @@
   }
   100% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 @keyframes progress-bar {
@@ -25,7 +27,7 @@
   }
   100% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 /* Apparition animation*/
@@ -331,9 +333,20 @@ h1 {
   padding-top: 22px;
   box-shadow: 2px 2px 2px #d1d1d1;
 }
+@media screen and (min-width: 426px) {
+  .header {
+    height: 128px;
+  }
+}
 .header__logo {
   width: 170px;
   height: 33px;
+}
+@media screen and (min-width: 426px) {
+  .header__logo {
+    width: 340px;
+    height: 66px;
+  }
 }
 .header__return {
   position: absolute;
@@ -353,10 +366,20 @@ h1 {
   flex-direction: column;
   margin-top: -30px;
 }
+@media screen and (min-width: 426px) {
+  .footer {
+    height: 150px;
+  }
+}
 .footer__title {
   padding: 22px 0 18px 0;
   font-size: 18px;
   font-weight: 100;
+}
+@media screen and (min-width: 426px) {
+  .footer__title {
+    font-size: 35px;
+  }
 }
 .footer__list {
   display: flex;
@@ -365,6 +388,17 @@ h1 {
   height: 100px;
   font-size: 16px;
   cursor: pointer;
+}
+@media screen and (min-width: 426px) {
+  .footer__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer__list li {
+    margin-left: 20px;
+    padding-right: 10px;
+  }
 }
 .footer__list__object1 {
   width: 190px;
@@ -388,6 +422,11 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 426px) {
+  .main-image {
+    height: 350px;
+  }
+}
 
 .menu-section {
   background-color: #f6f6f6;
@@ -398,6 +437,13 @@ h1 {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .menu-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .menu-section__header-menu {
   width: 100%;
@@ -438,6 +484,11 @@ h1 {
   flex-direction: column;
   row-gap: 13px;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 1025px) {
+  .menu-section__sub-menu {
+    width: 30%;
+  }
 }
 .menu-section__sub-menu__title-menu {
   text-transform: uppercase;
@@ -563,6 +614,11 @@ h1 {
   align-self: center;
   margin: 10px 0 85px 0;
 }
+@media screen and (min-width: 1025px) {
+  .menu-section__btn-order {
+    margin: 0 40% 0 40%;
+  }
+}
 .menu-section__btn-order:hover::after {
   opacity: 1;
 }
@@ -582,7 +638,6 @@ h1 {
   transition: opacity 500ms;
 }
 
-/* METTRE DANS UNE MEDIA QUERIES POUR INF 450 PX OU CHANGER AVEC UNE MEDIA QUERIES? A Voir */
 .menu-exception {
   height: 92px;
 }
@@ -680,9 +735,24 @@ h1 {
   align-items: center;
   padding: 50px 0 67px 0;
 }
+@media screen and (min-width: 1024px) {
+  .working {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 250px;
+    padding: 30px 0 45px 0;
+  }
+}
 .working__title {
   font-weight: 700;
   width: 87%;
+}
+@media screen and (min-width: 1024px) {
+  .working__title {
+    width: 100%;
+    margin-left: 3%;
+  }
 }
 .working__working-card {
   cursor: pointer;
@@ -698,6 +768,17 @@ h1 {
   box-shadow: #cfcfcf 0px 3px 15px;
   position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .working__working-card {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .working__working-card {
+    width: 30%;
+    justify-content: center;
+  }
 }
 .working__working-card:hover::after {
   opacity: 1;
@@ -746,9 +827,25 @@ h1 {
   justify-content: space-between;
   padding: 55px 0 60px 0;
 }
+@media screen and (min-width: 1025px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 25px;
+    height: 700px;
+    padding: 30px 0 60px 0;
+  }
+}
 .restaurants__title {
   font-weight: 700;
   width: 87%;
+}
+@media screen and (min-width: 1025px) {
+  .restaurants__title {
+    width: 100%;
+    margin-left: 3%;
+  }
 }
 .restaurants__card {
   width: 89.6%;
@@ -756,6 +853,16 @@ h1 {
   position: relative;
   border-radius: 20px;
   box-shadow: #cfcfcf 0px 3px 15px;
+}
+@media screen and (min-width: 426px) {
+  .restaurants__card {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurants__card {
+    width: 45%;
+  }
 }
 .restaurants__card__image {
   width: 100%;
@@ -792,12 +899,12 @@ h1 {
   font-size: 16px;
 }
 .restaurants__card__card-description__title-card {
-  width: 50%;
+  width: 75%;
   font-weight: 700;
   color: black;
 }
 .restaurants__card__card-description__card-text {
-  width: 50%;
+  width: 75%;
   font-size: 18px;
   color: black;
   font-weight: 300;
@@ -830,8 +937,8 @@ h1 {
   height: 100%;
   background-color: #ffffff;
   position: fixed;
-  -webkit-animation: loader-diseaper 0.1s 3.5s ease-in-out both;
-          animation: loader-diseaper 0.1s 3.5s ease-in-out both;
+  -webkit-animation: loader-diseaper 0.3s 3.5s ease-in-out both;
+          animation: loader-diseaper 0.3s 3.5s ease-in-out both;
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -850,8 +957,9 @@ h1 {
           animation: circle-spin 3s ease-in-out both;
 }
 .loading-spinner__circle-spinner h1 {
+  font-size: 30px;
   position: absolute;
-  left: 80px;
+  left: 75px;
   width: 100%;
   -webkit-animation: apparition-omf 400ms 2.5s ease-in-out both;
           animation: apparition-omf 400ms 2.5s ease-in-out both;
