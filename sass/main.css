@@ -616,7 +616,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .menu-section__btn-order {
-    margin: 0 40% 0 40%;
+    margin: 0 40% 85px 40%;
   }
 }
 .menu-section__btn-order:hover::after {
