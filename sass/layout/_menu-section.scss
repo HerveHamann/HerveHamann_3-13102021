@@ -128,7 +128,7 @@
     align-self: center;
     margin: 10px 0 85px 0;
     @include laptopl-min {
-      margin: 0 40% 0 40%;
+      margin: 0 40% 85px 40%;
     }
     &:hover {
       &::after {
