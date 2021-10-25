@@ -203,6 +203,11 @@
 }
 
 /*media queries mixin*/
+@mixin mobiles-min {
+  @media screen and (max-width: map-get($media-map, smobilemax )) {
+    @content;
+  }
+}
 @mixin laptop-min {
   @media screen and (min-width: map-get($media-map, laptopmax )) {
     @content;

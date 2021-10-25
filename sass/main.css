@@ -13,8 +13,8 @@
 @-webkit-keyframes progress-bar {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   100% {
     opacity: 1;
@@ -25,8 +25,8 @@
 @keyframes progress-bar {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   100% {
     opacity: 1;
@@ -554,6 +554,11 @@ h1 {
   font-size: 28px;
   font-weight: 100;
   padding-left: 1.4%;
+}
+@media screen and (max-width: 320px) {
+  .menu-section__header-menu__heading-menu {
+    font-size: 24px;
+  }
 }
 .menu-section__header-menu__heart {
   font-size: 25px;

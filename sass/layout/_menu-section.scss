@@ -11,6 +11,9 @@
 
     &__heading-menu {
       @include heading-menu;
+      @include mobiles-min {
+        font-size: 24px;
+      }
     }
     &__heart {
       @include heart;
