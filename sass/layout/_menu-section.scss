@@ -25,7 +25,7 @@
       right: 7.7%;
       cursor: pointer;
       opacity: 0;
-      &:active {
+      &:hover {
         animation: progress-bar $prog-bar-dur forwards ease-in-out;
       }
     }
@@ -76,10 +76,10 @@
           @include text-cut;
         }
       }
-      &:active .menu-section__sub-menu__button-menu__text-menu {
+      &:hover .menu-section__sub-menu__button-menu__text-menu {
         width: 75%;
       }
-      &:active .menu-section__sub-menu__button-menu__money-validate {
+      &:hover .menu-section__sub-menu__button-menu__money-validate {
         transform: translateX(0px);
         & > .menu-section__sub-menu__button-menu__money-validate__validate-bar {
           & > i {
