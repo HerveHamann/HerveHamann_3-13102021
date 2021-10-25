@@ -59,7 +59,7 @@
         right: 24px;
         opacity: 0;
         cursor: pointer;
-        &:active {
+        &:hover {
           animation: progress-bar $prog-bar-dur forwards;
         }
       }

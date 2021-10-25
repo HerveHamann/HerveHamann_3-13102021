@@ -927,7 +927,7 @@ h1 {
   opacity: 0;
   cursor: pointer;
 }
-.restaurants__card__card-description__heart-full:active {
+.restaurants__card__card-description__heart-full:hover {
   -webkit-animation: progress-bar 500ms forwards;
           animation: progress-bar 500ms forwards;
 }
