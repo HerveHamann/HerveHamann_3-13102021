@@ -730,6 +730,8 @@ h1 {
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  text-align: center;
+  margin-left: 20px;
 }
 .menu-section__btn-order {
   color: #ffffff;
